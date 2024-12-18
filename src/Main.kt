@@ -1,6 +1,10 @@
 import java.util.Scanner
 
-class Expense(var sum: Int, var category: String, var date: String)
+sealed class Test {
+
+}
+
+class Expense(var sum: Int, var category: String, var date: String) : Test()
 
 class Expenses {
 
@@ -13,7 +17,7 @@ class Expenses {
         Expense(300, "Shopping", "10.07.2024"),
         Expense(120, "Entertainment", "03.08.2024"),
         Expense(200, "Entertainment", "18.08.2024"),
-        Expense(100, "Shopping", "05.09.20024"),
+        Expense(100, "Shopping", "05.09.2024"),
     )
 
     fun addExpense(){
@@ -66,8 +70,8 @@ fun main() {
     var check: Int
     println("Введите 0 чтобы завершить работу программы.\n" +
             "Введите 1, чтобы добавить новый расход.\n" +
-            "Введите 2, чтобы вывести список расходов" +
-            "\nВведите 3, чтобы вывести суммы расходов для категорий")
+            "Введите 2, чтобы вывести список расходов.\n" +
+            "Введите 3, чтобы вывести суммы расходов для категорий.")
 
     do {
         val scan = Scanner(System.`in`)
